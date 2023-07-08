@@ -1,57 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First GitHub Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>My First Github Page</title>
+</head>
+
+<head>
     <style>
+        /* Basic styling */
+
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
         }
-        .container {
-            width: 80%;
-            margin: auto;
-            background-color: white;
+
+        nav {
+            background-color: #ffffff;
+            color: #000000;
+            display: flex;
+            align-items: center;
+            padding: 5px;
+        }
+
+        nav a {
+            color: #000000;
+            text-decoration: none;
+            padding: 5px;
+        }
+
+        .logo img {
+            width: 44px;
+            /* Adjust the width as needed */
+            height: auto;
+            /* Maintain the aspect ratio */
+            margin-right: 10px;
+        }
+        .ambulance {
+            position: relative;
+
+        }
+        .ambulance .project {        
+        position: absolute;
+        width:100%;
+        }
+        .project {
+            background-color: rgba(0, 0, 0, 0.5);
             padding: 20px;
+            bottom: 50px;
+            left: 0;
+            box-sizing: border-box;
+            color: #fff;
+            margin: 0;
+            font-size: 30px;
+           }
+
+        .header {
+            flex-grow: 1;
+            text-align: right;
         }
-        h1, h2 {
-            color: #333;
+
+        .header h2 {
+            margin: 0;
+            color: rgb(0, 0, 0);
+            text-align: left;
+            font-size: 30px;
         }
+
+        .tabs {
+            margin-right: auto;
+        }
+
+        .ghub {
+            width: 30px;
+            /* Adjust the width to make the logo smaller */
+            height: auto;
+            /* Maintain the aspect ratio */
+        }
+        p {
+            text-align:center;
+        }
+        
+        h3{
+            text-align: center;
+            font-size:24px;
+        }
+        .ghub {
+            width: 30px; /* Adjust the width as needed */
+            height: auto;
+            margin-right: 1px; /* Add some space between the logo and text */
+        }
+
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Welcome to UVA-MLSys GitHub Page!</h1>
-        <h2>About us</h2>
-        <div>
-            <div style="display: flex;flex-direction: row;">
-                <p>Name: Xin Sun</p>
-                <p>Email: xs7tng@virginia.edu</p>
-                <p>Role: Undergraduate Researcher</p>
-            </div>
-            <div style="display: flex;flex-direction: row;">
-                <p>Name: XXXX</p>
-                <p>Email: XXXX</p>
-                <p>Role: Undergraduate Researcher</p>
-            </div>
-            <div style="display: flex;flex-direction: row;">
-                <p>Name: XXXX</p>
-                <p>Email: XXXX</p>
-                <p>Role: Undergraduate Researcher</p>
-            </div>
-            <div style="display: flex;flex-direction: row;">
-                <p>Name: XXXX</p>
-                <p>Email: XXXX</p>
-                <p>Role: Undergraduate Researcher</p>
-            </div>
+    <nav>
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/University_of_Virginia_Rotunda_logo.svg/2007px-University_of_Virginia_Rotunda_logo.svg.png"></div>
+        <div class="header">
+            <h2>Emergency Vehicle Classification</h2>
         </div>
-        <h2>Our Project:</h2>
-        <p>Here is the description of our project:</p>
-        <h2>Contact us</h2>
-        <p>You can reach us at [Your Email Address] or follow me on [Social Media Platforms].</p>
+        <div class="header">
+            <a href="#pp">Point Pillars</a>
+            <a href="#ev">Emergency Vehicles</a>
+            <a href="#ot">Our Team</a>
+
+        </div>
+    </nav>
+        
+    <div class="ambulance">
+        <img src="https://images.pexels.com/photos/15571631/pexels-photo-15571631/free-photo-of-chicago-ambulance-driving.jpeg">
+        <p class="project">This project looks to expand on the Point Pillars methodology of autonomous vehicles with respect to emergency vehicles</p>
+    </div>
+
+    <div class="subheadingpp">
+        <h3 id="pp" href="https://github.com/zhulf0804/PointPillars" target="_blank">Point Pillars</h3>
+      </div>
+    <img src="">
+    <p class="">Explain Point Pillars</p>
+
+    <h3 id="ev" href="https://github.com/UVA-MLSys/emergency-vehicle-classification" target="_blank">Emergency Vehicles</h3>
+    <p class="">This is where we step in to expand on this repo. We intend to include emergency vehicles as new category of vehicles to detect such that it can differentiate between regular trucks and a firetruck for instance.</p>
+
+    </div>
+        <h3 id="ot">Our Team</h3>
+    <p>Farhan Khan, Max Titov, Tanush Siotia, Xun Sin </p>
+    <p>With special thanks to Md Khairul Islam and Professor Geoffrey Fox who helped us throughout the project</p>
     </div>
 </body>
 </html>
