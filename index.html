@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>My First Github Page</title>
 </head>
 
@@ -41,11 +40,12 @@
         }
         .ambulance {
             position: relative;
-
+            max-width: 100%;
+            height: auto;
         }
         .ambulance .project {        
-        position: absolute;
-        width:100%;
+            position: absolute;
+            width:100%;
         }
         .project {
             background-color: rgba(0, 0, 0, 0.5);
@@ -55,15 +55,16 @@
             box-sizing: border-box;
             color: #fff;
             margin: 0;
-            font-size: 30px;
+            font-size: 25px;
+            text-align: center;
            }
 
         .header {
             flex-grow: 1;
             text-align: right;
+            font-family: 'Courier New', monospace;
         }
-
-        .header h2 {
+        .header h1 {
             margin: 0;
             color: rgb(0, 0, 0);
             text-align: left;
@@ -72,6 +73,7 @@
 
         .tabs {
             margin-right: auto;
+            
         }
 
         .ghub {
@@ -81,17 +83,37 @@
             /* Maintain the aspect ratio */
         }
         p {
+            font-family: 'Courier New', monospace;
+            margin-top: 40px;
+            margin-bottom: 25px;
+            margin-left: auto;
+            margin-right: auto;    
+            width: 60%;
             text-align:center;
         }
         
-        h3{
-            text-align: center;
-            font-size:24px;
-        }
         .ghub {
             width: 30px; /* Adjust the width as needed */
             height: auto;
             margin-right: 1px; /* Add some space between the logo and text */
+        }
+        h3 {
+            text-align: center;
+            font-size:24px;
+            color:black;            
+            font-family: 'Courier New', monospace;
+            margin-top: 65px;
+            margin-bottom: 40px;
+        }
+        .headingpp{
+            color: black;
+            text-decoration: none;
+        }
+        .picpp {
+            display: block;
+            margin: 0 auto;
+            max-width: 50%;
+            height: auto;
         }
 
     </style>
@@ -102,26 +124,25 @@
         <div class="logo">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/University_of_Virginia_Rotunda_logo.svg/2007px-University_of_Virginia_Rotunda_logo.svg.png"></div>
         <div class="header">
-            <h2>Emergency Vehicle Classification</h2>
+            <h1>EMERGENCY VEHICLE CLASSIFICATION</h1>
         </div>
         <div class="header">
-            <a href="#pp">Point Pillars</a>
-            <a href="#ev">Emergency Vehicles</a>
-            <a href="#ot">Our Team</a>
+            <a href="#pp">POINT PILLARS</a>
+            <a href="#ev">EMERGENCY VEHICLES</a>
+            <a href="#ot">OUR TEAM</a>
 
         </div>
     </nav>
         
     <div class="ambulance">
         <img src="https://images.pexels.com/photos/15571631/pexels-photo-15571631/free-photo-of-chicago-ambulance-driving.jpeg">
-        <p class="project">This project looks to expand on the Point Pillars methodology of autonomous vehicles with respect to emergency vehicles</p>
+        <h2 class="project">This project looks to expand on the Point Pillars methodology of autonomous vehicles with respect to emergency vehicles</h2>
     </div>
 
-    <div class="subheadingpp">
-        <h3 id="pp" href="https://github.com/zhulf0804/PointPillars" target="_blank">Point Pillars</h3>
-      </div>
-    <img src="">
-    <p class="">Explain Point Pillars</p>
+    <div><h3><a id="pp" href="https://github.com/zhulf0804/PointPillars" target="_blank" class="headingpp">Point Pillars</a></h3></div>
+    <p>Explain Point Pillars. this is where we use the poit pillars mechanism as described in the pic below to exmplofy the convolutional neural network that is used to determing how the car operates and makes its decisions</p>
+    <img class="picpp" src="https://www.researchgate.net/publication/357359269/figure/fig2/AS:1179975977844748@1658339604217/An-overview-of-the-PointPillars-network-structure-10-The-Pillar-Feature-Network.png">
+    <p>Explain Point Pillars</p>
 
     <h3 id="ev" href="https://github.com/UVA-MLSys/emergency-vehicle-classification" target="_blank">Emergency Vehicles</h3>
     <p class="">This is where we step in to expand on this repo. We intend to include emergency vehicles as new category of vehicles to detect such that it can differentiate between regular trucks and a firetruck for instance.</p>
