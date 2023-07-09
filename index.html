@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Github Page</title>
+    <title>mlcommons</title>
 </head>
 
 <head>
@@ -40,12 +40,14 @@
         }
         .ambulance {
             position: relative;
-            max-width: 100%;
+            width: 100%;
             height: auto;
+
         }
         .ambulance .project {        
             position: absolute;
             width:100%;
+
         }
         .project {
             background-color: rgba(0, 0, 0, 0.5);
@@ -75,13 +77,6 @@
             margin-right: auto;
             
         }
-
-        .ghub {
-            width: 30px;
-            /* Adjust the width to make the logo smaller */
-            height: auto;
-            /* Maintain the aspect ratio */
-        }
         p {
             font-family: 'Courier New', monospace;
             margin-top: 30px;
@@ -90,13 +85,9 @@
             margin-right: auto;    
             width: 50%;
             text-align:center;
+            line-height: 1.75;
         }
-        
-        .ghub {
-            width: 30px; /* Adjust the width as needed */
-            height: auto;
-            margin-right: 1px; /* Add some space between the logo and text */
-        }
+
         h3 {
             text-align: center;
             font-size:24px;
@@ -108,7 +99,7 @@
             color: black;
             text-decoration: none;
         }
-        .picpp {
+        .pic {
             display: block;
             margin: 0 auto;
             max-width: 40%;
@@ -134,24 +125,24 @@
     </nav>
         
     <div class="ambulance">
-        <img src="https://fortworthbusiness.com/media/2020/04/Canva-Motion-blur-of-speeding-ambulance-scaled.jpg">
+        <img src="https://kffhealthnews.org/wp-content/uploads/sites/2/2017/10/ambulance_1350.jpg">
         <h2 class="project">This project looks to expand on the Point Pillars methodology of autonomous vehicles with respect to emergency vehicles</h2>
     </div>
 
     <div><h3><a id="pp" href="https://github.com/zhulf0804/PointPillars" target="_blank" class="headingpp">Point Pillars</a></h3></div>
-    <p>This project is centered around the Point Pillars methodology of detecting vehicles.</p>
-    <img class="picpp" src="https://www.researchgate.net/publication/357359269/figure/fig2/AS:1179975977844748@1658339604217/An-overview-of-the-PointPillars-network-structure-10-The-Pillar-Feature-Network.png">
-    <p>Explain Point Pillars Here:</p>
+    <p>Point Pillars relies on data from LiDaR (Light Detection and Ranging) which they group into pillars instead of voxels allowing them to encode said pillars into a 2D birds eye view pseudo-image of the surroundings.</p>
+    <img class="pic" src="https://www.researchgate.net/publication/357359269/figure/fig2/AS:1179975977844748@1658339604217/An-overview-of-the-PointPillars-network-structure-10-The-Pillar-Feature-Network.png">
+    <p></p>
 
     <div><h3><a id="ev" href="https://github.com/UVA-MLSys/emergency-vehicle-classification" target="_blank" class="headingpp">Emergency Vehicles</a></h3></div>
-    <p>This is the point at which we decided to add a category for emergency vehicles, which is something not considered by the initial project. These include ambulances, fire trucks, and police cars. The first step is simply to work in conjunction with Point Pillars and thus we are looking to initially identify these vehicles and distinguish them from other such automobiles. The next step would to then be able to differentiate if their siren is active or not which would result in different actions needing to be taken, such as pulling over for a cop car or moving to the side to give way for an ambulance.<br>To identify emergency vehicles we started with an existing starter code doing so on Kaggle using a pretrained model with the Keras and EfficientNet libraries.</p>
-    <img class="picpp" src="https://www.kaggleusercontent.com/kf/37220076/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..B2ZBgHV0LlnBAa2wOlFsGA.irECmjlLa2gp_6gDRZi252nM1g0l4AgJs660alBsJkoRuXQCKLBd9GakROs5ZhH4wsKs_ry2cLTLhttY_VniNFnBpjNyaf3NUZX-KEewIufrvSNrTFps24J2o25s2QrwhIM-wYzZpoxcOCpXdaMvoTttSqlAu-dbE6OYIK_JJOLIyJtg_P6LvYuiReEuomS8V2T9e5OpSsp0sF7kgyu1Hpv8MUJPNNRyzyVJ8KQPtQKY_SxcWZyxxqcuRN621xdscyp8Cisrnld0V648efUhULPoGmlekGHBmV9AuoEm1tSsYHBHJXbFs7BcY3YPkLQ4j4teAlgooGcrf291PynaSol0-aTpcA2KORP60zrOIbseovIF5nwehh_EKP7Og09hM8YzOarUIzOTlBY9HUISq93Ykn-y5nNgN0cHuuuih75c1tFqHa-XdUPS_INu46yB2vvTJ-mnLJRuW1tUcG3xBqOckU3R5AFdAAsHefKHTssRs8aVXaMGzd2OIlo_JMMc8OFSJcLJjkzKIjfyX_NMfngTSg9l52ta5oJqCPUDpzWimF_BaaO0f3-zHwd4Zwb0myjwFgt_OCbQUu-jeYSfD0WwHw1ZIXaz6OgqPOVBPxPaK6mO6y--2SxWk9wzSLCyjBCyzGV-h4QPTck6HT3vj772eTonRBB97IduhEXwSl4.sEzmRVg6f8TA-3J1578T4A/__results___files/__results___15_0.png">
-    <img class="picpp" src="https://www.kaggleusercontent.com/kf/37220076/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..B2ZBgHV0LlnBAa2wOlFsGA.irECmjlLa2gp_6gDRZi252nM1g0l4AgJs660alBsJkoRuXQCKLBd9GakROs5ZhH4wsKs_ry2cLTLhttY_VniNFnBpjNyaf3NUZX-KEewIufrvSNrTFps24J2o25s2QrwhIM-wYzZpoxcOCpXdaMvoTttSqlAu-dbE6OYIK_JJOLIyJtg_P6LvYuiReEuomS8V2T9e5OpSsp0sF7kgyu1Hpv8MUJPNNRyzyVJ8KQPtQKY_SxcWZyxxqcuRN621xdscyp8Cisrnld0V648efUhULPoGmlekGHBmV9AuoEm1tSsYHBHJXbFs7BcY3YPkLQ4j4teAlgooGcrf291PynaSol0-aTpcA2KORP60zrOIbseovIF5nwehh_EKP7Og09hM8YzOarUIzOTlBY9HUISq93Ykn-y5nNgN0cHuuuih75c1tFqHa-XdUPS_INu46yB2vvTJ-mnLJRuW1tUcG3xBqOckU3R5AFdAAsHefKHTssRs8aVXaMGzd2OIlo_JMMc8OFSJcLJjkzKIjfyX_NMfngTSg9l52ta5oJqCPUDpzWimF_BaaO0f3-zHwd4Zwb0myjwFgt_OCbQUu-jeYSfD0WwHw1ZIXaz6OgqPOVBPxPaK6mO6y--2SxWk9wzSLCyjBCyzGV-h4QPTck6HT3vj772eTonRBB97IduhEXwSl4.sEzmRVg6f8TA-3J1578T4A/__results___files/__results___15_1.png">
-    <p>Explain the graphs above as well as continue from the line above and explain what you would like to do:</p>
+    <p>This is the point at which we decided to add a category for emergency vehicles, which is something not considered by the initial project. These include ambulances, fire trucks, and police cars. The first step is simply to work in conjunction with Point Pillars and thus we are looking to initially identify these vehicles and distinguish them from other such automobiles. The next step would to then be able to differentiate if their siren is active or not which would result in different actions needing to be taken, such as pulling over for a cop car or moving to the side to give way for an ambulance.<br>To identify emergency vehicles we started with an existing starter code doing so on Kaggle using a pretrained model with the Keras and EfficientNet libraries.<br>For the first part we take the output from the Point Pillars network (the image with cars, pedestrians, and cyclists labeled with the boxes around it) and crop the pictures of cars. We then feed these pictures into the our emergency vehicle detection network and classify the vehicles accordingly. Finally we add the label back onto the original point pillars image so that it can essentially be registered as another category.</p>
+    <img class="pic" src="https://www.kaggleusercontent.com/kf/37220076/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..B2ZBgHV0LlnBAa2wOlFsGA.irECmjlLa2gp_6gDRZi252nM1g0l4AgJs660alBsJkoRuXQCKLBd9GakROs5ZhH4wsKs_ry2cLTLhttY_VniNFnBpjNyaf3NUZX-KEewIufrvSNrTFps24J2o25s2QrwhIM-wYzZpoxcOCpXdaMvoTttSqlAu-dbE6OYIK_JJOLIyJtg_P6LvYuiReEuomS8V2T9e5OpSsp0sF7kgyu1Hpv8MUJPNNRyzyVJ8KQPtQKY_SxcWZyxxqcuRN621xdscyp8Cisrnld0V648efUhULPoGmlekGHBmV9AuoEm1tSsYHBHJXbFs7BcY3YPkLQ4j4teAlgooGcrf291PynaSol0-aTpcA2KORP60zrOIbseovIF5nwehh_EKP7Og09hM8YzOarUIzOTlBY9HUISq93Ykn-y5nNgN0cHuuuih75c1tFqHa-XdUPS_INu46yB2vvTJ-mnLJRuW1tUcG3xBqOckU3R5AFdAAsHefKHTssRs8aVXaMGzd2OIlo_JMMc8OFSJcLJjkzKIjfyX_NMfngTSg9l52ta5oJqCPUDpzWimF_BaaO0f3-zHwd4Zwb0myjwFgt_OCbQUu-jeYSfD0WwHw1ZIXaz6OgqPOVBPxPaK6mO6y--2SxWk9wzSLCyjBCyzGV-h4QPTck6HT3vj772eTonRBB97IduhEXwSl4.sEzmRVg6f8TA-3J1578T4A/__results___files/__results___15_0.png">
+    <img class="pic" src="https://www.kaggleusercontent.com/kf/37220076/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..B2ZBgHV0LlnBAa2wOlFsGA.irECmjlLa2gp_6gDRZi252nM1g0l4AgJs660alBsJkoRuXQCKLBd9GakROs5ZhH4wsKs_ry2cLTLhttY_VniNFnBpjNyaf3NUZX-KEewIufrvSNrTFps24J2o25s2QrwhIM-wYzZpoxcOCpXdaMvoTttSqlAu-dbE6OYIK_JJOLIyJtg_P6LvYuiReEuomS8V2T9e5OpSsp0sF7kgyu1Hpv8MUJPNNRyzyVJ8KQPtQKY_SxcWZyxxqcuRN621xdscyp8Cisrnld0V648efUhULPoGmlekGHBmV9AuoEm1tSsYHBHJXbFs7BcY3YPkLQ4j4teAlgooGcrf291PynaSol0-aTpcA2KORP60zrOIbseovIF5nwehh_EKP7Og09hM8YzOarUIzOTlBY9HUISq93Ykn-y5nNgN0cHuuuih75c1tFqHa-XdUPS_INu46yB2vvTJ-mnLJRuW1tUcG3xBqOckU3R5AFdAAsHefKHTssRs8aVXaMGzd2OIlo_JMMc8OFSJcLJjkzKIjfyX_NMfngTSg9l52ta5oJqCPUDpzWimF_BaaO0f3-zHwd4Zwb0myjwFgt_OCbQUu-jeYSfD0WwHw1ZIXaz6OgqPOVBPxPaK6mO6y--2SxWk9wzSLCyjBCyzGV-h4QPTck6HT3vj772eTonRBB97IduhEXwSl4.sEzmRVg6f8TA-3J1578T4A/__results___files/__results___15_1.png">
+    <p>The graphs above show the validation accuracy and validation loss of the model in identifying emergency vehicles in the training set.</p>
 
-    </div>
-        <h3 id="ot">Our Team</h3>
-    <p>Farhan Khan, Max Titov, Tanush Siotia, Xun Sin<br>With special thanks to Md Khairul Islam and Professor Geoffrey Fox who helped us throughout the project</p>
-    </div>
+
+    <h3 id="ot">Our Team</h3>
+    <p>Farhan Khan, Max Titov, Tanush Siotia, Xun Sin<br>With special thanks to Professor Geoffrey Fox  and Md Kairul Islam whom helped us throughout the project</p>
+
 </body>
 </html>
