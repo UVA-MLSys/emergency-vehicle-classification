@@ -44,8 +44,7 @@
             height: auto;
             justify-content: center;
             align-items: center;
-            left: 5%;
-            right: 5%;
+            left: 10%;
 
         }
         .ambulance .project {        
@@ -141,7 +140,7 @@
 
     <div><h3><a id="ev" href="https://github.com/UVA-MLSys/emergency-vehicle-classification" target="_blank" class="headingpp">Emergency Vehicles</a></h3></div>
     <p>This is the point at which we decided to add a category for emergency vehicles, which is something not considered by the initial project. These include ambulances, fire trucks, and police cars. The first step is simply to work in conjunction with Point Pillars and thus we are looking to initially identify these vehicles and distinguish them from other such automobiles. The next step would to then be able to differentiate if their siren is active or not which would result in different actions needing to be taken, such as pulling over for a cop car or moving to the side to give way for an ambulance.<br>To identify emergency vehicles we started with an existing starter code doing so on Kaggle using a pretrained model with the Keras and EfficientNet libraries.<br>For the first part we take the output from the Point Pillars network (the image with cars, pedestrians, and cyclists labeled with the boxes around it) and crop the pictures of cars. We then feed these pictures into the our emergency vehicle detection network and classify the vehicles accordingly. Finally we add the label back onto the original point pillars image so that it can essentially be registered as another category.</p>
-    <img class="pic" src="/archive/imgs/trainvalacc.png">
+    <img class="pic" src="archive/imgs/trainvalacc.png">
     <img class="pic" src="archive/imgs/trainvalloss.png">
     <p>The graphs above show the validation accuracy and validation loss of the model in identifying emergency vehicles in the training set.</p>
 
