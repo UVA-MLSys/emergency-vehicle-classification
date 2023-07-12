@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mlcommons</title>
+</head>
+
+<head>
+    <style>
+        /* Basic styling */
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            background-color: #ffffff;
+            color: #000000;
+            display: flex;
+            align-items: center;
+            padding: 5px;
+        }
+
+        nav a {
+            color: #000000;
+            text-decoration: none;
+            padding: 5px;
+        }
+
+        .logo img {
+            width: 44px;
+            /* Adjust the width as needed */
+            height: auto;
+            /* Maintain the aspect ratio */
+            margin-right: 10px;
+        }
+        .ambulance {
+            position: relative;
+            width: 100%;
+            height: auto;
+            justify-content: center;
+            align-items: center;
+            left: 10%;
+
+        }
+        .ambulance .project {        
+            position: absolute;
+            left: 10%;
+            right: 10%;
+
+        }
+        .project {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 15px;
+            bottom: 50px;
+            left: 0;
+            box-sizing: border-box;
+            color: #fff;
+            margin: 0;
+            font-size: 25px;
+            text-align: center;
+           }
+
+        .header {
+            flex-grow: 1;
+            text-align: right;
+            font-family: 'Courier New', monospace;
+        }
+        .header h1 {
+            margin: 0;
+            color: rgb(0, 0, 0);
+            text-align: left;
+            font-size: 30px;
+        }
+
+        .tabs {
+            margin-right: auto;
+            
+        }
+        p {
+            font-family: 'Courier New', monospace;
+            margin-top: 30px;
+            margin-bottom: 25px;
+            margin-left: auto;
+            margin-right: auto;    
+            width: 50%;
+            text-align:center;
+            line-height: 1.75;
+        }
+
+        h3 {
+            text-align: center;
+            font-size:24px;
+            color:black;            
+            font-family: 'Courier New', monospace;
+            margin-top: 65px;
+        }
+        .headingpp{
+            color: black;
+            text-decoration: none;
+        }
+        .pic {
+            display: block;
+            margin: 0 auto;
+            max-width: 40%;
+            height: auto;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/University_of_Virginia_Rotunda_logo.svg/2007px-University_of_Virginia_Rotunda_logo.svg.png"></div>
+        <div class="header">
+            <h1>EMERGENCY VEHICLE CLASSIFICATION</h1>
+        </div>
+        <div class="header">
+            <a href="#pp">POINT PILLARS</a>
+            <a href="#ev">EMERGENCY VEHICLES</a>
+            <a href="#ot">OUR TEAM</a>
+
+        </div>
+    </nav>
+        
+    <div class="ambulance">
+        <img src="https://kffhealthnews.org/wp-content/uploads/sites/2/2017/10/ambulance_1350.jpg">
+        <h2 class="project">This project looks to expand on the Point Pillars methodology of autonomous vehicles with respect to emergency vehicles</h2>
+    </div>
+
+    <div><h3><a id="pp" href="https://github.com/zhulf0804/PointPillars" target="_blank" class="headingpp">Point Pillars</a></h3></div>
+    <p>At a glance, Point Pillars relies on data from LiDaR (Light Detection and Ranging) which they group into pillars instead of voxels allowing them to encode said pillars into a 2D birds eye view pseudo-image of the surroundings.</p>
+    <img class="pic" src="https://www.researchgate.net/publication/357359269/figure/fig2/AS:1179975977844748@1658339604217/An-overview-of-the-PointPillars-network-structure-10-The-Pillar-Feature-Network.png">
+    <p>There are more nuances of Point Pillars which we won't into but its still important that its understood at least at a very basic level how it operates. More information can be found on the Github which can be accessed by clicking the subheader.</p>
+
+    <div><h3><a id="ev" href="https://github.com/UVA-MLSys/emergency-vehicle-classification" target="_blank" class="headingpp">Emergency Vehicles</a></h3></div>
+    <p>This is the point at which we decided to add a category for emergency vehicles, which is something not considered by the initial project. These include ambulances, fire trucks, and police cars. The first step is simply to work in conjunction with Point Pillars and thus we are looking to initially identify these vehicles and distinguish them from other such automobiles. The next step would to then be able to differentiate if their siren is active or not which would result in different actions needing to be taken, such as pulling over for a cop car or moving to the side to give way for an ambulance.<br>To identify emergency vehicles we started with an existing starter code doing so on Kaggle using a pretrained model with the Keras and EfficientNet libraries.<br>For the first part we take the output from the Point Pillars network (the image with cars, pedestrians, and cyclists labeled with the boxes around it) and crop the pictures of cars. We then feed these pictures into the our emergency vehicle detection network and classify the vehicles accordingly. Finally we add the label back onto the original point pillars image so that it can essentially be registered as another category.</p>
+    <img class="pic" src="archive/imgs/trainvalacc.png">
+    <img class="pic" src="archive/imgs/trainvalloss.png">
+    <p>The graphs above show the validation accuracy and validation loss of the model in identifying emergency vehicles in the training set.</p>
+
+
+    <h3 id="ot">Our Team</h3>
+    <p>Farhan Khan, Max Titov, Tanush Siotia, Xun Sin<br>With special thanks to Professor Geoffrey Fox  and Md Kairul Islam whom helped us throughout the project</p>
+
+</body>
+</html>
