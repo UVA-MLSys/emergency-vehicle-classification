@@ -9,8 +9,6 @@
 
 <head>
     <style>
-        /* Basic styling */
-
         body {
             margin: 0;
             padding: 0;
@@ -42,17 +40,28 @@
             position: relative;
             width: 100%;
             height: auto;
+            display: flex;
             justify-content: center;
             align-items: center;
-            left: 10%;
-
         }
+
+        .ambulance img {
+        width: 100%;
+        height: auto;
+        }
+
         .ambulance .project {        
             position: absolute;
-            left: 10%;
-            right: 10%;
-
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%; /* adjust as needed */
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 10px;
+            text-align: center;
         }
+
         .project {
             background-color: rgba(0, 0, 0, 0.5);
             padding: 15px;
@@ -109,6 +118,12 @@
             max-width: 40%;
             height: auto;
         }
+        .cars {
+            display: block;
+            margin: auto;
+            max-width: 60%;
+            height: auto;
+        }
 
     </style>
 </head>
@@ -122,7 +137,9 @@
         </div>
         <div class="header">
             <a href="#pp">POINT PILLARS</a>
-            <a href="#ev">EMERGENCY VEHICLES</a>
+            <a href="#ev">EVC</a>
+            <a href="#comb">INTEGRATION</a>
+            <a href="#ns">FUTURE</a>
             <a href="#ot">OUR TEAM</a>
 
         </div>
@@ -136,17 +153,30 @@
     <div><h3><a id="pp" href="https://github.com/zhulf0804/PointPillars" target="_blank" class="headingpp">Point Pillars</a></h3></div>
     <p>At a glance, Point Pillars relies on data from LiDaR (Light Detection and Ranging) which they group into pillars instead of voxels allowing them to encode said pillars into a 2D birds eye view pseudo-image of the surroundings.</p>
     <img class="pic" src="https://www.researchgate.net/publication/357359269/figure/fig2/AS:1179975977844748@1658339604217/An-overview-of-the-PointPillars-network-structure-10-The-Pillar-Feature-Network.png">
-    <p>There are more nuances of Point Pillars which we won't into but its still important that its understood at least at a very basic level how it operates. More information can be found on the Github which can be accessed by clicking the subheader.</p>
+    <p>There are more nuances of Point Pillars which we won't get into but its still important that its understood at least at a very basic level how it operates. More information can be found on the Github which can be accessed by clicking the subheader.</p>
 
-    <div><h3><a id="ev" href="https://github.com/UVA-MLSys/emergency-vehicle-classification" target="_blank" class="headingpp">Emergency Vehicles</a></h3></div>
-    <p>This is the point at which we decided to add a category for emergency vehicles, which is something not considered by the initial project. These include ambulances, fire trucks, and police cars. The first step is simply to work in conjunction with Point Pillars and thus we are looking to initially identify these vehicles and distinguish them from other such automobiles. The next step would to then be able to differentiate if their siren is active or not which would result in different actions needing to be taken, such as pulling over for a cop car or moving to the side to give way for an ambulance.<br>To identify emergency vehicles we started with an existing starter code doing so on Kaggle using a pretrained model with the Keras and EfficientNet libraries.<br>For the first part we take the output from the Point Pillars network (the image with cars, pedestrians, and cyclists labeled with the boxes around it) and crop the pictures of cars. We then feed these pictures into the our emergency vehicle detection network and classify the vehicles accordingly. Finally we add the label back onto the original point pillars image so that it can essentially be registered as another category.</p>
+    <div><h3><a id="ev" href="https://github.com/UVA-MLSys/emergency-vehicle-classification" target="_blank" class="headingpp">Emergency Vehicles Classification</a></h3></div>
+    <p>This is the point at which we decided to add our contribution by implementing a new classification category for emergency vehicles, something not considered by the Point Pillars project. The emergency vehicles include ambulances, fire trucks, and police cars.<br> Our first step is simply to work in conjunction with Point Pillars and thus we are looking to initially identify these vehicles and distinguish them from other regular automobiles. To identify emergency vehicles we started with an existing code base we had found on Kaggle which used a model with the Keras and EfficientNet libraries.</p>
+    
     <img class="pic" src="archive/imgs/trainvalacc.png">
     <img class="pic" src="archive/imgs/trainvalloss.png">
-    <p>The graphs above show the validation accuracy and validation loss of the model in identifying emergency vehicles in the training set.</p>
+    <p>The above are our initial results from running the model. The model is clearly overfitting with the training accuracy significantly higher than the validation accuracy and the training loss lower than the validation loss. Thus we made some adjustments to account for these faults in the original model.</p>
+    <img class="pic" src="archive/imgs/newtrainlossacc.png">
+    <p>These are our improved results with the updated model. The model is much more sophisticated with the issue of overfitting being fixed, as evident by the overlap of the validation and training accuracy curves. Using techniques such as dropout, data augmentation, and image manipulation, we were able to achieve much better results. There is some fine tuning we can do to make the model even better by implementing more regularization techniques such as batch normalization, however we are focusing more on the final step of this project: integrating this model with Point Pillars.</p>
 
+    <div><h3><a id="comb" href="https://github.com/UVA-MLSys/emergency-vehicle-classification" target="_blank" class="headingpp">Integration</a></h3></div>
+    <p>For the final piece of our project we are going to integrate Point Pillars network with the our EVC model. We first have to be able to isolate and extract the images of the cars from the data we get through the cameras implemented in the car used by Point Pillars.</p>
+    
+    <img class="cars"  src="archive/imgs/carwhole.png">
+    <br>
+    <img class="pic" src="archive/imgs/cars.png">
+    <p>We then can feed these scaled down images to the EVC model which then gives us a binary output of whether the vehicle is regular or an emergency automobile. And the final step would be to send this output back to the Point Pillars network which will appropriately label said vehicle.</p>
+
+    <h3 id="ns">Future</h3>
+    <p>The future for our project is initially to be able to wrap up all these technical aspects: improving the EVC model and having a seamless integration between the model and Point Pillars. Following which we could look to add more technology such as looking into how a sound sensor could give insight into the siren of the vehicle which again could lead to another level of classification of active emergency vehicles. Other than that however, we plan on writing a paper for this project which will be released soon.</p>
 
     <h3 id="ot">Our Team</h3>
-    <p>Farhan Khan, Max Titov, Tanush Siotia, Xun Sin<br>With special thanks to Professor Geoffrey Fox  and Md Kairul Islam whom helped us throughout the project</p>
+    <p>Farhan Khan, Max Titov, Tanush Siotia, Xin Sun<br>With special thanks to Professor Geoffrey Fox  and Md Kairul Islam whom helped us throughout the project</p>
 
 </body>
 </html>
